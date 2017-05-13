@@ -1,0 +1,20 @@
+#formulario{
+  border-style: double;
+  border-color: #ff0000;
+  width: 40%;
+  text-align: center;
+  right: 10px;
+  float: right;
+  }
+#imagenes{
+
+
+}
+#Img1{
+height: 40px;
+width: auto;
+}
+#Img2{
+height: 45px;
+width: auto;
+}

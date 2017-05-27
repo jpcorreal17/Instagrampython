@@ -1,4 +1,3 @@
-{%load static %}
 <!DOCTYPE html>
 <html>
  <head>
@@ -13,43 +12,42 @@
 <body>
   <br>
   <div class="card" style="width: 45%; border-color:#ff0000; text-align: center;float: center; right: -25%">
-   <form action="/action_page.php">
    <div class="card-block">
   </div>
      <div class="fourm-group" id="formulario">
       <font size="32" color=ff0000 face="SEGA LOGO FONT">GIPHANTIE
       </font>
       </div>
+      <form action='{% url 'crear_usuario' %}' method='POST'>
+        {% csrf_token %}
       <div class="form-group">
-       <input type="text" placeholder="Usuario">
+       <input type="text" class="form-group" name='username' id='email' placeholder="Usuario">
      </div>
      <div class="form-group">
-       <input type="password" placeholder="Contraseña">
+       <input type="password" class="form-group" name='password' id='password' placeholder="Contraseña">
      </div>
      <div class="form-group">
-        <input type="text" placeholder="Nombre">
+        <input type="text" class="form-group" name='name'id='name'placeholder="Nombre">
       </div>
       <div class="form-group">
-        <input type="text" placeholder="Correo electronico">
+        <input type="text" class="form-group" name='email' id='email' placeholder="Correo electronico">
        </div>
-       <div class="form-group">
-     </form>
-      </div>
    </div>
    <br>
   <div class="card" style="width: 45%; border-color:#ff0000; text-align: center;float: center; right: -25%" id="botones">
     <br>
     <center>
       <br>
-    <button type="button" class="btn btn-outline-danger" style="width: 40%; right:-25%;float:center">Registrate</button><br>
+    <button class="btn btn-outline-danger" style="width: 40%; right:-25%;float:center">Registrate</button><br>
+    </form>
     ¿tienes una cuenta?<br>
     <a href="https://www.google.com">Entrar</a><br><br>
   </div> <br>
    <center>
-    <div class="form-group" id="imagenes">
+    <!--<div class="form-group" id="imagenes">
      <img src="Imagenes/app-store-badge-es_small.png" id="Img1" style="height: 40px; width: auto; right: -40%"><br>
      <img src="Imagenes/cuaderno-de-campo-google-play.png" id="Img2" style="height: 45px; width: auto"><br>
-    </div>
+   </div>-->
     <p><h2>The New Social network.</h2></p>
     <p><h3><u>Also note that the default width of a text field is 20 characters.</u></h3></p>
     <br><br><br><br><br><br>

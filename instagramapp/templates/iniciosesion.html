@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-<html>
 <head>
  <meta charset="utf-8">
  <title>GIPHANTIE</title>
@@ -14,16 +13,17 @@
  <br>
  <div class="card" style="width: 35%; border-color:#ff0000; text-align: center;float: center; right: -30%">
   <div class="card-block">
-  <form action="/action_page.php">
+  <form action='{% url 'login' %}' method='POST'>
+     {% csrf_token %}
   </div>
     <div class="fourm-group" id="formulario">
      <font size="32"color=ff0000 face="SEGA LOGO FONT">GIPHANTIE</font>
      </div>
      <div class="form-group">
-      <input type="text"placeholder="Usuario">
+      <input type="text" class="form-cotrol" name="username"placeholder="Usuario">
     </div>
     <div class="form-group">
-      <input type="password" placeholder="Contraseña">
+      <input type="password" class="form-control" name="password" placeholder="Contraseña">
     </div>
       <div class="form-group">
     </form>
@@ -34,15 +34,11 @@
    <br>
    <center>
      <br>
-   <button type="button" class="btn btn-outline-danger"style="width: 40%; right:-25%;float:center">Registrate</button><br>
+   <button  class="btn btn-outline-danger"style="width: 40%; right:-25%;float:center">iniciar sesion</button><br>
    ¿tienes una cuenta?<br>
    <a href="https://www.google.com">Entrar</a><br><br>
  </div><br>
   <center>
-   <div class="form-group"id="imagenes">
-    <img src="Imagenes/app-store-badge-es_small.png" id="Img1"style="height: 40px; width: auto;"><br>
-    <img src="Imagenes/cuaderno-de-campo-google-play.png" id="Img2" style="height: 45px; width: auto"><br>
-   </div>
    <p><h2>The New Social network.</h2></p>
    <p><h3><u>Also note that the default width of a text field is 20 characters.</u></h3></p>
    <br><br><br><br><br><br>
